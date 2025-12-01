@@ -1,7 +1,9 @@
-let clasificador
+// let clasificador
 let etiqueta
 let confidencia
 let video
+let confianza = 0
+let texto = ""
 
 function preload() {
   // put preload code here
@@ -34,4 +36,31 @@ function draw() {
   fill("light green")
   text(etiqueta,10,20)
   text(confidencia,10, 60)
+
+  fill(255);
+  textSize(16);
+  textAlign(CENTER);
+  if (confianza > 0.7) {
+    if (confianza === "Pikachu"){ 
+      texto = " ⚡⚡ ¡Es un Pikachu! ⚡⚡"
+    } else if (label === "Medalla") {
+      texto = "¡Es una Medalla! "
+    } else if (label === "Zorro") {
+      texto = " ¡Es un Zorro! "
+    }
+  } else {
+    texto = " No estoy seguro... ";
+  }
+  text (label + " " + confianza, width / 2, height - 4)
+}
+
+function gotResult (error, results) {
+
+  if (error) {
+    console.error(error);
+    return;
+  }
+
+
+  
 }
