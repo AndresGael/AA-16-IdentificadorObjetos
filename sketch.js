@@ -38,11 +38,11 @@
     textAlign(CENTER);
     if (confianza > 0.7) {
       if (label ==="Chopper") {
-        texto = "⚡⚡¡Es un Pikachu!⚡⚡";
+        texto = "¡Es Chopper!";
       } else if (label ==="Conejo") {
-        texto = "🏅😁¡Es una Medalla!😁🏅";
+        texto = "¡Es un Conejo!";
       } else if (label === "Spidey") {
-        texto = "🦊🌟¡Es un Zorro!🌟🦊";
+        texto = "¡Es Spidey!";
       }
     } else {
       texto = "🤔 No estoy seguro... 🤔";
