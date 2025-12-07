@@ -9,7 +9,7 @@
   // To store the classification
   let label = "";
   let confianza = 0;
-  let texto =""
+  let texto ="";
   // Load the model first
   function preload() {
     classifier = ml5.imageClassifier(imageModelURL + 'model.json');
@@ -36,17 +36,16 @@
     fill(255);
     textSize(16);
     textAlign(CENTER);
-    if (confianza > 0.7) {
-      if (label ==="Chopper") {
+      if (label === "Chopper") {
         texto = "¡Es Chopper!";
-      } else if (label ==="Conejo") {
+      } else if (label === "Conejo") {
         texto = "¡Es un Conejo!";
       } else if (label === "Spidey") {
         texto = "¡Es Spidey!";
       }
-    } else {
-      texto = "🤔 No estoy seguro... 🤔";
-    }
+      if (confianza < 0.75) {
+        texto = "No estoy seguro";
+      }
     text(texto + " " + confianza, width / 2, height - 4);
   }
 
