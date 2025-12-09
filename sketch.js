@@ -1,8 +1,8 @@
 // Classifier Variable
   let classifier;
   // Model URL
-  let imageModelURL = './my_model/';
-  
+  let imageModelURL = './model/';
+
   // Video
   let video;
   let flippedVideo;
@@ -36,12 +36,15 @@
     fill(255);
     textSize(16);
     textAlign(CENTER);
-      if (label === "Chopper") {
-        texto = "¡Es Chopper!";
-      } else if (label === "Conejo") {
-        texto = "¡Es un Conejo!";
-      } else if (label === "Spidey") {
-        texto = "¡Es Spidey!";
+      if (label === "Hotwheels") {
+        texto = "¡Es un Hotwheels🏎️!";
+      } else if (label === "Reloj") {
+        texto = "¡Es un Reloj⏱️!";
+      } else if (label === "Astronauta") {
+        texto = "¡Es un Astronauta👨‍🚀!";
+      
+      } else if (label === "Botella") {
+        texto = "¡Es una Botella🍾!";
       }
       if (confianza < 0.75) {
         texto = "No estoy seguro";
